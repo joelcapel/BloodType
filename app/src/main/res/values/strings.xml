@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">BDA</string>
 
+    <string name="navigation_drawer_open">Abrir drawer navigation</string>
+    <string name="navigation_drawer_close">Cerrar drawer navigation</string>
+
     <string-array name="bloodgroups">
         <item>Selecciona tu grupo de sangre</item>
         <item>A+</item>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_myfeed"
+        android:title="Home"/>
+
+    <item
+        android:id="@+id/sentEmail"
+        android:icon="@drawable/ic_check"
+        android:title="Emails de donantes"/>
+
+    <item
+        android:id="@+id/compatible"
+        android:icon="@drawable/compatible"
+        android:title="Compatibles"/>
+
+    <item android:title="Grupos de Sangre">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/amas"
+                    android:icon="@drawable/aplus"
+                    android:title="A Positivo"/>
+
+                <item
+                    android:id="@+id/amenos"
+                    android:icon="@drawable/abminus"
+                    android:title="A Negativo"/>
+
+                <item
+                    android:id="@+id/bmas"
+                    android:icon="@drawable/bplus"
+                    android:title="B Positivo"/>
+
+                <item
+                    android:id="@+id/bmenos"
+                    android:icon="@drawable/bminus"
+                    android:title="B Negativo"/>
+
+                <item
+                    android:id="@+id/abmas"
+                    android:icon="@drawable/abplus"
+                    android:title="AB Positivo"/>
+
+                <item
+                    android:id="@+id/abmenos"
+                    android:icon="@drawable/abminus"
+                    android:title="AB Negativo"/>
+
+                <item
+                    android:id="@+id/omas"
+                    android:icon="@drawable/oplus"
+                    android:title="O Positivo"/>
+
+                <item
+                    android:id="@+id/omenos"
+                    android:icon="@drawable/ominus"
+                    android:title="O Negativo"/>
+
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="Actions">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/perfil"
+                    android:icon="@drawable/ic_profile"
+                    android:title="Perfil"/>
+
+                <item
+                    android:id="@+id/notificaciones"
+                    android:icon="@drawable/ic_notifications"
+                    android:title="Notificaciones"/>
+
+                <item
+                    android:id="@+id/hospitalescerca"
+                    android:icon="@drawable/ic_logout"
+                    android:title="Hospitales cerca"/>
+
+                <item
+                    android:id="@+id/logout"
+                    android:icon="@drawable/ic_logout"
+                    android:title="Cerrar sesión"/>
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="Contactanos">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/about"
+                    android:icon="@drawable/ic_about"
+                    android:title="Sobre nosotros"/>
+
+                <item
+                    android:id="@+id/share"
+                    android:icon="@drawable/ic_share"
+                    android:title="Compartir"/>
+
+            </group>
+        </menu>
+    </item>
+
+</menu>
