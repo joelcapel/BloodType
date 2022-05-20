@@ -74,6 +74,7 @@
                     android:text="Ya estas registrado? Inicia sesión"
                     android:layout_marginTop="15dp"
                     android:textColor="#000"
+                    android:gravity="center"
                     android:textStyle="bold"
                     android:layout_gravity="center"
                     android:layout_width="match_parent"
