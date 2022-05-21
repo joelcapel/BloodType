@@ -209,14 +209,70 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
+            case R.id.amas:
+                Intent intent3 = new Intent(MainActivity.this, CategorySelectedActivity.class);
+                intent3.putExtra("grupo", "A+");
+                startActivity(intent3);
+                break;
+
+            case R.id.amenos:
+                Intent intent4 = new Intent(MainActivity.this, CategorySelectedActivity.class);
+                intent4.putExtra("grupo", "A-");
+                startActivity(intent4);
+                break;
+
+            case R.id.bmas:
+                Intent intent5 = new Intent(MainActivity.this, CategorySelectedActivity.class);
+                intent5.putExtra("grupo", "B+");
+                startActivity(intent5);
+                break;
+
+            case R.id.bmenos:
+                Intent intent6 = new Intent(MainActivity.this, CategorySelectedActivity.class);
+                intent6.putExtra("grupo", "B-");
+                startActivity(intent6);
+                break;
+
+            case R.id.abmas:
+                Intent intent7 = new Intent(MainActivity.this, CategorySelectedActivity.class);
+                intent7.putExtra("grupo", "AB+");
+                startActivity(intent7);
+                break;
+
+            case R.id.abmenos:
+                Intent intent8 = new Intent(MainActivity.this, CategorySelectedActivity.class);
+                intent8.putExtra("grupo", "AB-");
+                startActivity(intent8);
+                break;
+
+            case R.id.omas:
+                Intent intent9 = new Intent(MainActivity.this, CategorySelectedActivity.class);
+                intent9.putExtra("grupo", "O+");
+                startActivity(intent9);
+                break;
+
+            case R.id.omenos:
+                Intent intent10 = new Intent(MainActivity.this, CategorySelectedActivity.class);
+                intent10.putExtra("grupo", "O-");
+                startActivity(intent10);
+                break;
+
             case R.id.perfil:
                 Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
                 startActivity(intent);
+                break;
 
             case R.id.logout:
                 FirebaseAuth.getInstance().signOut();
                 Intent intent2 = new Intent(MainActivity.this, LoginActivity.class);
                 startActivity(intent2);
+                break;
+
+            case R.id.compatible:
+                Intent intent11 = new Intent(MainActivity.this, CategorySelectedActivity.class);
+                intent11.putExtra("grupo", "Compatible conmigo");
+                startActivity(intent11);
+                break;
         }
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;

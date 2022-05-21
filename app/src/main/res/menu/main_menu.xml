@@ -14,7 +14,7 @@
     <item
         android:id="@+id/compatible"
         android:icon="@drawable/compatible"
-        android:title="Compatibles"/>
+        android:title="Compatible conmigo"/>
 
     <item android:title="Grupos de Sangre">
         <menu>
@@ -78,7 +78,7 @@
 
                 <item
                     android:id="@+id/hospitalescerca"
-                    android:icon="@drawable/ic_logout"
+                    android:icon="@drawable/ic_hospital"
                     android:title="Hospitales cerca"/>
 
                 <item
