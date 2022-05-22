@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -137,6 +138,12 @@ public class MainActivity extends AppCompatActivity
                         Glide.with(getApplicationContext()).load(imageUrl).into(nav_imagen_perfil);
                     }else{
                         nav_imagen_perfil.setImageResource(R.drawable.profile_image);
+                    }
+
+                    Menu nav_menu = nav_view.getMenu();
+
+                    if (tipo.equals("donante")){
+                        nav_menu.findItem(R.id.sentEmail).setTitle("Emails recibidos");
                     }
                 }
             }
@@ -272,6 +279,11 @@ public class MainActivity extends AppCompatActivity
                 Intent intent11 = new Intent(MainActivity.this, CategorySelectedActivity.class);
                 intent11.putExtra("grupo", "Compatible conmigo");
                 startActivity(intent11);
+                break;
+
+            case R.id.sentEmail:
+                Intent intent12 = new Intent(MainActivity.this, SentEmailActivity.class);
+                startActivity(intent12);
                 break;
         }
         drawerLayout.closeDrawer(GravityCompat.START);

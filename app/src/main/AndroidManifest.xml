@@ -14,7 +14,7 @@
         android:theme="@style/Theme.BDA"
         tools:targetApi="31">
         <activity
-            android:name=".SendEmailActivity"
+            android:name=".SentEmailActivity"
             android:exported="false" />
         <activity
             android:name=".CategorySelectedActivity"
