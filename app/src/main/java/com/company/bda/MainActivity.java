@@ -291,6 +291,11 @@ public class MainActivity extends AppCompatActivity
                 Intent intent13 = new Intent(MainActivity.this, NotificationActivity.class);
                 startActivity(intent13);
                 break;
+
+            case R.id.about:
+                Intent intent14 = new Intent(MainActivity.this, AboutActivity.class);
+                startActivity(intent14);
+                break;
         }
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;

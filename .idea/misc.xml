@@ -8,8 +8,10 @@
         <entry key="..\:/Users/Joel26/AndroidStudioProjects/BDA/app/src/main/res/drawable/ic_person.xml" value="0.1" />
         <entry key="..\:/Users/Joel26/AndroidStudioProjects/BDA/app/src/main/res/drawable/navigation_selector.xml" value="0.1" />
         <entry key="..\:/Users/Joel26/AndroidStudioProjects/BDA/app/src/main/res/drawable/navigation_view_item_selected.xml" value="0.1" />
+        <entry key="..\:/Users/Joel26/AndroidStudioProjects/BDA/app/src/main/res/layout/activity_about.xml" value="0.25" />
         <entry key="..\:/Users/Joel26/AndroidStudioProjects/BDA/app/src/main/res/layout/activity_category_selected.xml" value="0.24444444444444444" />
         <entry key="..\:/Users/Joel26/AndroidStudioProjects/BDA/app/src/main/res/layout/activity_category_selector.xml" value="0.24947916666666667" />
+        <entry key="..\:/Users/Joel26/AndroidStudioProjects/BDA/app/src/main/res/layout/activity_hospitales_cerca.xml" value="0.24947916666666667" />
         <entry key="..\:/Users/Joel26/AndroidStudioProjects/BDA/app/src/main/res/layout/activity_login.xml" value="0.2" />
         <entry key="..\:/Users/Joel26/AndroidStudioProjects/BDA/app/src/main/res/layout/activity_main.xml" value="0.24444444444444444" />
         <entry key="..\:/Users/Joel26/AndroidStudioProjects/BDA/app/src/main/res/layout/activity_notification.xml" value="0.23541666666666666" />
@@ -20,6 +22,7 @@
         <entry key="..\:/Users/Joel26/AndroidStudioProjects/BDA/app/src/main/res/layout/activity_seleccionar_registro.xml" value="0.264" />
         <entry key="..\:/Users/Joel26/AndroidStudioProjects/BDA/app/src/main/res/layout/activity_send_email.xml" value="0.24947916666666667" />
         <entry key="..\:/Users/Joel26/AndroidStudioProjects/BDA/app/src/main/res/layout/activity_splash_screen.xml" value="0.1" />
+        <entry key="..\:/Users/Joel26/AndroidStudioProjects/BDA/app/src/main/res/layout/fragment_maps_activity.xml" value="0.24947916666666667" />
         <entry key="..\:/Users/Joel26/AndroidStudioProjects/BDA/app/src/main/res/layout/header.xml" value="0.24444444444444444" />
         <entry key="..\:/Users/Joel26/AndroidStudioProjects/BDA/app/src/main/res/layout/notification_item.xml" value="0.2484375" />
         <entry key="..\:/Users/Joel26/AndroidStudioProjects/BDA/app/src/main/res/layout/output_layout.xml" value="0.24444444444444444" />
