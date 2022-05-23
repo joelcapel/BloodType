@@ -25,6 +25,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.DateFormat;
+import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -111,6 +114,8 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder>{
                                                     DatabaseReference receptorRef = FirebaseDatabase.getInstance().getReference("emails")
                                                             .child(idDelReceptor);
                                                     receptorRef.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(true);
+
+                                                    addNotifications(idDelReceptor, FirebaseAuth.getInstance().getCurrentUser().getUid());
                                                 }
                                             }
                                         });
@@ -153,5 +158,18 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder>{
             emailNow = itemView.findViewById(R.id.emailNow);
 
         }
+    }
+
+    private void addNotifications(String receptorId, String envioId){
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference()
+                .child("notifications").child(receptorId);
+        String date = DateFormat.getDateInstance().format(new Date());
+        HashMap<String, Object> hashMap = new HashMap<>();
+        hashMap.put("receptorId", receptorId);
+        hashMap.put("envioId", envioId);
+        hashMap.put("texto", "Te envió un correo, eche un vistazo!");
+        hashMap.put("date", date);
+
+        reference.push().setValue(hashMap);
     }
 }

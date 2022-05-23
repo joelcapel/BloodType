@@ -144,6 +144,7 @@ public class MainActivity extends AppCompatActivity
 
                     if (tipo.equals("donante")){
                         nav_menu.findItem(R.id.sentEmail).setTitle("Emails recibidos");
+                        nav_menu.findItem(R.id.notificaciones).setVisible(true);
                     }
                 }
             }
@@ -284,6 +285,11 @@ public class MainActivity extends AppCompatActivity
             case R.id.sentEmail:
                 Intent intent12 = new Intent(MainActivity.this, SentEmailActivity.class);
                 startActivity(intent12);
+                break;
+
+            case R.id.notificaciones:
+                Intent intent13 = new Intent(MainActivity.this, NotificationActivity.class);
+                startActivity(intent13);
                 break;
         }
         drawerLayout.closeDrawer(GravityCompat.START);

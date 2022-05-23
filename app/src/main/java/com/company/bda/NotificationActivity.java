@@ -2,16 +2,15 @@ package com.company.bda;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import androidx.appcompat.widget.Toolbar;
-
-import com.company.bda.Adapter.UserAdapter;
-import com.company.bda.Model.User;
+import com.company.bda.Adapter.NotificationAdapter;
+import com.company.bda.Model.Notification;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -22,23 +21,22 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SentEmailActivity extends AppCompatActivity {
+public class NotificationActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
     private RecyclerView recyclerView;
 
-    List<String> idList;
-    List<User> userList;
-    UserAdapter userAdapter;
+    List<Notification> notificationList;
+    NotificationAdapter notificationAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sent_email);
+        setContentView(R.layout.activity_notification);
 
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Personas que han enviado Emails");
+        getSupportActionBar().setTitle("Notificaciones");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
@@ -47,53 +45,26 @@ public class SentEmailActivity extends AppCompatActivity {
         linearLayoutManager.setReverseLayout(true);
         linearLayoutManager.setStackFromEnd(true);
         recyclerView.setLayoutManager(linearLayoutManager);
+        
+        notificationList = new ArrayList<>();
+        notificationAdapter = new NotificationAdapter(NotificationActivity.this, notificationList);
+        recyclerView.setAdapter(notificationAdapter);
 
-        userList = new ArrayList<>();
-        userAdapter = new UserAdapter(SentEmailActivity.this, userList);
-        recyclerView.setAdapter(userAdapter);
-
-        idList = new ArrayList<>();
-        getIdOfUsers();
+        leerNotificaciones();
     }
 
-    private void getIdOfUsers() {
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("emails")
-                .child(FirebaseAuth.getInstance().getCurrentUser().getUid());
+    private void leerNotificaciones() {
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference()
+                .child("notifications").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                idList.clear();
+                notificationList.clear();
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()){
-                    idList.add(dataSnapshot.getKey());
+                    Notification notification = dataSnapshot.getValue(Notification.class);
+                    notificationList.add(notification);
                 }
-
-                showUsers();
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
-    }
-
-    private void showUsers() {
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("users");
-        reference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                userList.clear();
-                for (DataSnapshot dataSnapshot : snapshot.getChildren()){
-                    User user = dataSnapshot.getValue(User.class);
-
-                    for (String id: idList){
-                        if (user.getId().equals(id)){
-                            userList.add(user);
-                        }
-                    }
-                }
-
-                userAdapter.notifyDataSetChanged();
+                notificationAdapter.notifyDataSetChanged();
             }
 
             @Override
@@ -115,5 +86,4 @@ public class SentEmailActivity extends AppCompatActivity {
         }
 
     }
-
 }
