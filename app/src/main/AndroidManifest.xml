@@ -6,22 +6,25 @@
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
-        android:requestLegacyExternalStorage="true"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@drawable/bloodtype"
         android:label="Blood Type"
+        android:requestLegacyExternalStorage="true"
         android:roundIcon="@drawable/bloodtype"
         android:supportsRtl="true"
         android:theme="@style/Theme.BDA"
         tools:targetApi="31">
+        <activity
+            android:name=".MainMensajes"
+            android:exported="false" />
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyClwjvR0ivcaCfVDGrb8-rsqLdZyYBkygc"/>
+            android:value="AIzaSyClwjvR0ivcaCfVDGrb8-rsqLdZyYBkygc" />
 
         <activity
             android:name=".HospitalesCercaActivity"
             android:exported="false" />
-
         <activity
             android:name=".AboutActivity"
             android:exported="false" />

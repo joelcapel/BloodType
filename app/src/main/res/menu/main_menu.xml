@@ -83,6 +83,11 @@
                     android:title="Hospitales cerca"/>
 
                 <item
+                    android:id="@+id/mensajes"
+                    android:icon="@drawable/ic_baseline_message_24"
+                    android:title="Mensajes"/>
+
+                <item
                     android:id="@+id/logout"
                     android:icon="@drawable/ic_logout"
                     android:title="Cerrar sesión"/>

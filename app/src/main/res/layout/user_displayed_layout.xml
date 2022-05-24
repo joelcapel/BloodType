@@ -78,12 +78,23 @@
             android:id="@+id/emailNow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/buttons_background"
+            android:text="Enviar email"
+            android:visibility="gone"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/msgNow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:layout_gravity="center_vertical"
             android:background="@drawable/buttons_background"
-            android:text="Email"
+            android:text="Mensaje"
             android:visibility="gone"
             android:textAllCaps="false"/>
+
     </LinearLayout>
 
     <View

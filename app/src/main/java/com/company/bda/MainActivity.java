@@ -301,6 +301,11 @@ public class MainActivity extends AppCompatActivity
                 Intent intent15 = new Intent(MainActivity.this, HospitalesCercaActivity.class);
                 startActivity(intent15);
                 break;
+
+            case R.id.mensajes:
+                Intent intent16 = new Intent(MainActivity.this, MainMensajes.class);
+                startActivity(intent16);
+                break;
         }
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
