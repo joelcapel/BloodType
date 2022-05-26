@@ -42,7 +42,7 @@ public class MensajesAdapter extends RecyclerView.Adapter<HolderMensaje> {
 
     @Override
     public void onBindViewHolder(@NonNull HolderMensaje holder, int position) {
-        holder.getHora().setText(mensajeList.get(position).getNombre());
+        holder.getNombre().setText(mensajeList.get(position).getNombre());
         holder.getMensaje().setText(mensajeList.get(position).getMensaje());
         if (mensajeList.get(position).getTypeMensaje().equals("2")){
             holder.getFotoMensaje().setVisibility(View.VISIBLE);

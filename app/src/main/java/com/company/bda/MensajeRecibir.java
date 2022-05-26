@@ -2,6 +2,8 @@ package com.company.bda;
 
 import com.company.bda.Model.Mensaje;
 
+import java.util.Map;
+
 public class MensajeRecibir extends Mensaje {
     private Long hora;
 
@@ -16,6 +18,7 @@ public class MensajeRecibir extends Mensaje {
         super(mensaje, nombre, fotoPerfil, typeMensaje);
         this.hora = hora;
     }
+
 
     public Long getHora() {
         return hora;

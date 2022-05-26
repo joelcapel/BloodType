@@ -70,6 +70,7 @@ public class MainMensajes extends AppCompatActivity {
         rvMensajes = findViewById(R.id.rvMensajes);
         txtMensaje = findViewById(R.id.txtMensaje);
         btnEnviar = findViewById(R.id.btnEnviar);
+        backButton = findViewById(R.id.backButton);
         btnEnviarFoto = findViewById(R.id.btnEnviarFoto);
         fotoPerfilCadena = "";
 
@@ -114,6 +115,7 @@ public class MainMensajes extends AppCompatActivity {
             @Override
             public void onItemRangeInserted(int positionStart, int itemCount) {
                 super.onItemRangeInserted(positionStart, itemCount);
+                setScrollbar();
             }
         });
 
@@ -161,7 +163,7 @@ public class MainMensajes extends AppCompatActivity {
                 @Override
                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                     Task<Uri> u = taskSnapshot.getStorage().getDownloadUrl();
-                    MensajeEnviar m = new MensajeEnviar("Joel te ha enviado una foto",u.toString(), nombre.getText().toString(), fotoPerfilCadena,"2", ServerValue.TIMESTAMP);
+                    MensajeEnviar m = new MensajeEnviar("Alan te ha enviado una foto",u.toString(), nombre.getText().toString(), fotoPerfilCadena,"2", ServerValue.TIMESTAMP);
                     databaseReference.push().setValue(m);
                 }
             });
@@ -174,7 +176,7 @@ public class MainMensajes extends AppCompatActivity {
                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                     Task<Uri> u = taskSnapshot.getStorage().getDownloadUrl();
                     fotoPerfilCadena = u.toString();
-                    MensajeEnviar m = new MensajeEnviar("Joel ha actualizado su foto de perfil",u.toString(), nombre.getText().toString(), fotoPerfilCadena,"2", ServerValue.TIMESTAMP);
+                    MensajeEnviar m = new MensajeEnviar("Alan ha actualizado su foto de perfil",u.toString(), nombre.getText().toString(), fotoPerfilCadena,"2", ServerValue.TIMESTAMP);
                     databaseReference.push().setValue(m);
                     Glide.with(MainMensajes.this).load(u.toString()).into(fotoPerfil);
                 }
