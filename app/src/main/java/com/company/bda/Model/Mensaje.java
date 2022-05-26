@@ -1,24 +1,29 @@
 package com.company.bda.Model;
 
 public class Mensaje {
-    private String mensaje, nombre, fotoPerfil, typeMensaje, urlFoto;
+
+    private String mensaje;
+    private String urlFoto;
+    private String nombre;
+    private String fotoPerfil;
+    private String type_mensaje;
 
     public Mensaje() {
     }
 
-    public Mensaje(String mensaje, String nombre, String fotoPerfil, String typeMensaje) {
+    public Mensaje(String mensaje, String nombre, String fotoPerfil, String type_mensaje) {
         this.mensaje = mensaje;
         this.nombre = nombre;
         this.fotoPerfil = fotoPerfil;
-        this.typeMensaje = typeMensaje;
+        this.type_mensaje = type_mensaje;
     }
 
-    public Mensaje(String mensaje, String nombre, String fotoPerfil, String typeMensaje, String urlFoto) {
+    public Mensaje(String mensaje, String urlFoto, String nombre, String fotoPerfil, String type_mensaje) {
         this.mensaje = mensaje;
+        this.urlFoto = urlFoto;
         this.nombre = nombre;
         this.fotoPerfil = fotoPerfil;
-        this.typeMensaje = typeMensaje;
-        this.urlFoto = urlFoto;
+        this.type_mensaje = type_mensaje;
     }
 
     public String getMensaje() {
@@ -45,12 +50,12 @@ public class Mensaje {
         this.fotoPerfil = fotoPerfil;
     }
 
-    public String getTypeMensaje() {
-        return typeMensaje;
+    public String getType_mensaje() {
+        return type_mensaje;
     }
 
-    public void setTypeMensaje(String typeMensaje) {
-        this.typeMensaje = typeMensaje;
+    public void setType_mensaje(String type_mensaje) {
+        this.type_mensaje = type_mensaje;
     }
 
     public String getUrlFoto() {

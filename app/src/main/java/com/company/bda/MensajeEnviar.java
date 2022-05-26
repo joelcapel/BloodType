@@ -7,22 +7,20 @@ import java.util.Map;
 public class MensajeEnviar extends Mensaje {
     private Map hora;
 
+    public MensajeEnviar() {
+    }
+
     public MensajeEnviar(Map hora) {
         this.hora = hora;
     }
 
-    public MensajeEnviar(String s, String toString, Map hora) {
-        super();
+    public MensajeEnviar(String mensaje, String nombre, String fotoPerfil, String type_mensaje, Map hora) {
+        super(mensaje, nombre, fotoPerfil, type_mensaje);
         this.hora = hora;
     }
 
-    public MensajeEnviar(String mensaje, String nombre, String fotoPerfil, String typeMensaje, Map hora) {
-        super(mensaje, nombre, fotoPerfil, typeMensaje);
-        this.hora = hora;
-    }
-
-    public MensajeEnviar(String mensaje, String nombre, String fotoPerfil, String typeMensaje, String urlFoto, Map hora) {
-        super(mensaje, nombre, fotoPerfil, typeMensaje, urlFoto);
+    public MensajeEnviar(String mensaje, String urlFoto, String nombre, String fotoPerfil, String type_mensaje, Map hora) {
+        super(mensaje, urlFoto, nombre, fotoPerfil, type_mensaje);
         this.hora = hora;
     }
 

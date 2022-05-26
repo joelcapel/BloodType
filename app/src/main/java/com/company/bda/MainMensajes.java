@@ -182,14 +182,14 @@ public class MainMensajes extends AppCompatActivity {
                 }
             });
         }
-        backButton.setOnClickListener(new View.OnClickListener() {
+        /*backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainMensajes.this, MainActivity.class);
                 startActivity(intent);
                 finish();
             }
-        });
+        });*/
     }
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {

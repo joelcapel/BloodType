@@ -12,18 +12,19 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class HolderMensaje extends RecyclerView.ViewHolder {
 
-    private TextView nombre, mensaje, hora;
+    private TextView nombre;
+    private TextView mensaje;
+    private TextView hora;
     private CircleImageView fotoMensajePerfil;
     private ImageView fotoMensaje;
 
-    public HolderMensaje(@NonNull View itemView) {
+    public HolderMensaje(View itemView) {
         super(itemView);
-
-        nombre = itemView.findViewById(R.id.nombreMensaje);
-        mensaje = itemView.findViewById(R.id.mensajeMensaje);
-        hora = itemView.findViewById(R.id.horaMensaje);
-        fotoMensajePerfil = itemView.findViewById(R.id.fotoPerfilMensaje);
-        fotoMensaje = itemView.findViewById(R.id.mensajeFoto);
+        nombre = (TextView) itemView.findViewById(R.id.nombreMensaje);
+        mensaje = (TextView) itemView.findViewById(R.id.mensajeMensaje);
+        hora = (TextView) itemView.findViewById(R.id.horaMensaje);
+        fotoMensajePerfil = (CircleImageView) itemView.findViewById(R.id.fotoPerfilMensaje);
+        fotoMensaje = (ImageView) itemView.findViewById(R.id.mensajeFoto);
     }
 
     public TextView getNombre() {
