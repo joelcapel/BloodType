@@ -6,6 +6,7 @@
         <entry key="..\:/Users/Joel26/AndroidStudioProjects/BDA/app/src/main/res/drawable/buttons_background.xml" value="0.1" />
         <entry key="..\:/Users/Joel26/AndroidStudioProjects/BDA/app/src/main/res/drawable/header_background.xml" value="0.1" />
         <entry key="..\:/Users/Joel26/AndroidStudioProjects/BDA/app/src/main/res/drawable/ic_person.xml" value="0.1" />
+        <entry key="..\:/Users/Joel26/AndroidStudioProjects/BDA/app/src/main/res/drawable/ic_phone.xml" value="0.105" />
         <entry key="..\:/Users/Joel26/AndroidStudioProjects/BDA/app/src/main/res/drawable/ic_profile.xml" value="0.1" />
         <entry key="..\:/Users/Joel26/AndroidStudioProjects/BDA/app/src/main/res/drawable/navigation_selector.xml" value="0.1" />
         <entry key="..\:/Users/Joel26/AndroidStudioProjects/BDA/app/src/main/res/drawable/navigation_view_item_selected.xml" value="0.1" />
@@ -28,7 +29,7 @@
         <entry key="..\:/Users/Joel26/AndroidStudioProjects/BDA/app/src/main/res/layout/card_view_mensajes.xml" value="0.1" />
         <entry key="..\:/Users/Joel26/AndroidStudioProjects/BDA/app/src/main/res/layout/fragment_maps_activity.xml" value="0.24947916666666667" />
         <entry key="..\:/Users/Joel26/AndroidStudioProjects/BDA/app/src/main/res/layout/header.xml" value="0.24444444444444444" />
-        <entry key="..\:/Users/Joel26/AndroidStudioProjects/BDA/app/src/main/res/layout/notification_item.xml" value="0.2484375" />
+        <entry key="..\:/Users/Joel26/AndroidStudioProjects/BDA/app/src/main/res/layout/notification_item.xml" value="0.1" />
         <entry key="..\:/Users/Joel26/AndroidStudioProjects/BDA/app/src/main/res/layout/output_layout.xml" value="0.24444444444444444" />
         <entry key="..\:/Users/Joel26/AndroidStudioProjects/BDA/app/src/main/res/layout/user_displayed_layout.xml" value="0.24444444444444444" />
         <entry key="..\:/Users/Joel26/AndroidStudioProjects/BDA/app/src/main/res/menu/main_menu.xml" value="0.24947916666666667" />
