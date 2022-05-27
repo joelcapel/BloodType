@@ -38,7 +38,7 @@ public class SentEmailActivity extends AppCompatActivity {
 
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Emails Enviados");
+        getSupportActionBar().setTitle("Emails Enviados/Recibidos");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
